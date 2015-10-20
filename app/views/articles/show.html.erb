@@ -1,0 +1,16 @@
+
+??? run controller articles#show first?
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+
+<%= link_to 'edit', edit_article_path(@article) %>
+
+<%= link_to 'Back', articles_path %>

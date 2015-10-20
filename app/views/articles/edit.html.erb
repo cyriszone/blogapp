@@ -1,0 +1,15 @@
+<h1>Editing article</h1>
+
+<% #url: article_path(@article) = /articles/:id %>
+<% #This fomr is next linked to the Routes:     %>
+<% #article GET    /articles/:id(.:format)      articles#show %>
+<% #        PATCH  /articles/:id(.:format)      articles#update %>
+
+<% #The method: :patch option tells Rails that we want this form to be submitted via the PATCH HTTP method which is the HTTP method you're expected to use to update resources according to the REST protocol. %>
+
+<% #The reason we can use this shorter, simpler form_for declaration to stand in for either of the other forms is that @article is a resource corresponding to a full set of RESTful routes, and Rails is able to infer which URI and method to use. %>
+
+
+<%= render 'form' %>
+
+<%= link_to 'Back', articles_path %>
