@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
 
   #get 'pages/index'
 
@@ -19,11 +18,14 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'welcome#index'
-  root 'articles#index'
+  root 'welcome#index'
+  #root 'articles#index'
+  get '/noname at nowhere' => 'articles#index'
   resources :articles
   get '/articles_search' => 'articles#create'
 
+  get 'welcome/index'
+  
 end
 
 
