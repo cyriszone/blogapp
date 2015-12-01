@@ -25,7 +25,10 @@ Rails.application.routes.draw do
   get '/articles_search' => 'articles#create'
 
   get 'welcome/index'
-  
+
+  #for all error URL requests
+  match '*path', via: :all, to:'welcome/index'
+
 end
 
 
